@@ -17,13 +17,13 @@ export default function Navbar() {
 
       {/* Navigation Links */}
       <div className="flex space-x-6">
-        <button className="text-gray-700 hover:text-blue-500 font-medium">
+        <button className="text-gray-700 hover:text-blue-500 font-medium cursor-pointer">
           HOME
         </button>
-        <button className="text-gray-700 hover:text-blue-500 font-medium">
+        <button className="text-gray-700 hover:text-blue-500 font-medium cursor-pointer">
           GUIDE
         </button>
-        <button className="text-gray-700 hover:text-blue-500 font-medium">
+        <button className="text-gray-700 hover:text-blue-500 font-medium cursor-pointer">
           HOME+GUIDE
         </button>
       </div>
@@ -33,7 +33,7 @@ export default function Navbar() {
         {/* Toggle Button */}
         <button
           onClick={toggleProfileMenu}
-          className="flex items-center justify-center p-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors duration-200"
+          className="flex items-center justify-center p-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors duration-200 cursor-pointer"
         >
           <svg
             className="w-6 h-6"
