@@ -1,6 +1,8 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import React from "react";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,10 +18,11 @@ const App = () => {
           {/* Add your page content here */}
         </div>
       </main>
+      <Home />
 
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
