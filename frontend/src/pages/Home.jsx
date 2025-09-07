@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import { Heart, Star, MapPin, Users, Home as HomeIcon, Wifi, Car, Wind } from "lucide-react";
+import image1 from "../assets/image1.jpeg";
+import image2 from "../assets/image2.jpeg";
+import image3 from "../assets/image3.jpeg";
+import image4 from "../assets/image4.jpeg";
+import image5 from "../assets/image5.jpeg";
+import image6 from "../assets/image6.jpeg";
 
 const listings = [
   {
@@ -10,7 +16,7 @@ const listings = [
     nights: 2,
     rating: 5.0,
     reviews: 47,
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
+    image: image1,
     badge: "Guest favourite",
     superhost: true,
     guests: 4,
@@ -27,7 +33,7 @@ const listings = [
     nights: 2,
     rating: 4.94,
     reviews: 132,
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
+    image: image2,
     badge: "Guest favourite",
     superhost: false,
     guests: 2,
@@ -44,7 +50,7 @@ const listings = [
     nights: 2,
     rating: 4.94,
     reviews: 89,
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
+    image: image3,
     badge: "Superhost",
     superhost: true,
     guests: 6,
@@ -61,7 +67,7 @@ const listings = [
     nights: 2,
     rating: 4.87,
     reviews: 65,
-    image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&q=80",
+    image: image4,
     badge: null,
     superhost: false,
     guests: 5,
@@ -78,7 +84,7 @@ const listings = [
     nights: 2,
     rating: 4.98,
     reviews: 28,
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
+    image: image5,
     badge: "Luxury",
     superhost: true,
     guests: 8,
@@ -95,7 +101,7 @@ const listings = [
     nights: 2,
     rating: 4.91,
     reviews: 104,
-    image: "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&q=80",
+    image: image6,
     badge: "Unique stay",
     superhost: false,
     guests: 4,
