@@ -1,81 +1,81 @@
 import React, { useState } from "react";
 import { Heart, Star, MapPin, Users, Home as HomeIcon, Wifi, Car, Wind } from "lucide-react";
 import image1 from "../assets/image1.jpeg";
-import image2 from "../assets/image2.jpeg";
-import image3 from "../assets/image3.jpeg";
-import image4 from "../assets/image4.jpeg";
+import image9 from "../assets/image9.jpeg";
+import image15 from "../assets/image15.jpeg";
+import image13 from "../assets/image13.jpeg";
 import image5 from "../assets/image5.jpeg";
 import image6 from "../assets/image6.jpeg";
 
 const listings = [
   {
     id: 1,
-    title: "Cozy Mountain View Apartment",
-    location: "Upper Shillong",
-    price: 3795,
-    nights: 2,
-    rating: 5.0,
-    reviews: 47,
-    image: image1,
-    badge: "Guest favourite",
-    superhost: true,
-    guests: 4,
-    bedrooms: 2,
-    beds: 2,
-    amenities: ["Wifi", "Parking", "AC"],
-    available: true
-  },
-  {
-    id: 2,
-    title: "Charming Room with Garden Access",
-    location: "Police Bazaar",
-    price: 2467,
-    nights: 2,
-    rating: 4.94,
+    title: "Riverside Camping with Bonfire",
+    location: "Shnongpdeng, Dawki",
+    price: 1499,
+    nights: 1,
+    rating: 4.8,
     reviews: 132,
-    image: image2,
-    badge: "Guest favourite",
+    image: image1, 
+    badge: "Adventure spot",
     superhost: false,
     guests: 2,
-    bedrooms: 1,
-    beds: 1,
-    amenities: ["Wifi", "Garden"],
+    bedrooms: 1, 
+    beds: 1,    
+    amenities: ["Bonfire", "Boating", "Camping Gear", "Parking"],
     available: true
   },
+{
+  id: 2,
+  title: "Riverside Camping & Kayaking Experience",
+  location: "Shnongpdeng, Dawki",
+  price: 1699,
+  nights: 1,
+  rating: 4.7,
+  reviews: 98,
+  image: image9,
+  badge: "Nature escape",
+  superhost: false,
+  guests: 2,
+  bedrooms: 1,
+  beds: 1,
+  amenities: ["Kayaking", "Riverside View", "Camping Gear", "Parking"],
+  available: true
+},
   {
-    id: 3,
-    title: "Modern Flat in City Center",
-    location: "Laitumkhrah",
-    price: 3886,
-    nights: 2,
-    rating: 4.94,
-    reviews: 89,
-    image: image3,
-    badge: "Superhost",
-    superhost: true,
-    guests: 6,
-    bedrooms: 3,
-    beds: 4,
-    amenities: ["Wifi", "Parking", "Kitchen"],
-    available: true
-  },
+  id: 3,
+  title: "Suspension Bridge Riverside Camping",
+  location: "Shnongpdeng, Dawki",
+  price: 1799,
+  nights: 1,
+  rating: 4.9,
+  reviews: 154,
+  image: image15, 
+  badge: "Adventure lovers",
+  superhost: true,
+  guests: 2,
+  bedrooms: 1,
+  beds: 1,
+  amenities: ["Suspension Bridge View", "Kayaking", "Bonfire", "Parking"],
+  available: true
+},
   {
-    id: 4,
-    title: "Rustic Cottage Near Waterfalls",
-    location: "Mawphlang",
-    price: 4250,
-    nights: 2,
-    rating: 4.87,
-    reviews: 65,
-    image: image4,
-    badge: null,
-    superhost: false,
-    guests: 5,
-    bedrooms: 2,
-    beds: 3,
-    amenities: ["Parking", "Kitchen", "Garden"],
-    available: true
-  },
+  id: 4,
+  title: "Adventure Camping & Kayaking by Dawki River",
+  location: "Shnongpdeng, Dawki",
+  price: 1999,
+  nights: 1,
+  rating: 5.0,
+  reviews: 210,
+  image: image13,
+  badge: "Top Adventure Stay",
+  superhost: true,
+  guests: 2,
+  bedrooms: 1,
+  beds: 1,
+  amenities: ["Crystal Clear River", "Kayaking", "Suspension Bridge View", "Bonfire", "Parking"],
+  available: true
+},
   {
     id: 5,
     title: "Luxury Villa with Pool",
@@ -172,11 +172,10 @@ export default function Home() {
             <button
               key={filterOption}
               onClick={() => setFilter(filterOption)}
-              className={`px-6 py-2 rounded-full border transition-all whitespace-nowrap ${
-                filter === filterOption
+              className={`px-6 py-2 rounded-full border transition-all whitespace-nowrap ${filter === filterOption
                   ? "bg-gray-900 text-white border-gray-900"
                   : "bg-white text-gray-700 border-gray-300 hover:border-gray-400"
-              }`}
+                }`}
             >
               {filterOption.charAt(0).toUpperCase() + filterOption.slice(1)}
               {filterOption === "all" && ` (${listings.length})`}
@@ -199,19 +198,18 @@ export default function Home() {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
                 />
-                
+
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Badge */}
                 {item.badge && (
-                  <span className={`absolute top-3 left-3 px-3 py-1 text-xs font-semibold rounded-full shadow-lg backdrop-blur-sm ${
-                    item.badge === "Luxury" 
+                  <span className={`absolute top-3 left-3 px-3 py-1 text-xs font-semibold rounded-full shadow-lg backdrop-blur-sm ${item.badge === "Luxury"
                       ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
                       : item.badge === "Superhost"
-                      ? "bg-white/95 text-gray-900 border border-gray-200"
-                      : "bg-white/95 text-gray-900"
-                  }`}>
+                        ? "bg-white/95 text-gray-900 border border-gray-200"
+                        : "bg-white/95 text-gray-900"
+                    }`}>
                     {item.badge}
                   </span>
                 )}
@@ -225,12 +223,11 @@ export default function Home() {
                   className="absolute top-3 right-3 p-2 rounded-full bg-white/90 backdrop-blur-sm shadow-lg hover:scale-110 transition-transform duration-200"
                   aria-label={savedListings.has(item.id) ? "Remove from saved" : "Save listing"}
                 >
-                  <Heart 
-                    className={`w-5 h-5 transition-colors ${
-                      savedListings.has(item.id) 
-                        ? "fill-red-500 text-red-500" 
+                  <Heart
+                    className={`w-5 h-5 transition-colors ${savedListings.has(item.id)
+                        ? "fill-red-500 text-red-500"
                         : "text-gray-700 hover:text-red-500"
-                    }`}
+                      }`}
                   />
                 </button>
 
