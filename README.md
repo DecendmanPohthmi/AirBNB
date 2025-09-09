@@ -11,6 +11,6 @@ A modern travel booking platform built with the MERN stack, specializing in auth
 
 ## 🚀 Live Preview
 
-**[View Live Demo](https://camp-spot-kwy2chd6r-koushik369mondals-projects.vercel.app/)**
+**[View Live Demo](https://camp-spot.vercel.app/)**
 
 *Made with ❤️ for Meghalaya Explorers*
