@@ -17,7 +17,7 @@ export default function Navbar() {
 
       {/* Navigation Links */}
       <div className="flex space-x-6">
-        <button className="text-gray-700 hover:text-blue-500 font-medium cursor-pointer">
+        <button className="text-gray-700 hover:text-blue-500 font-medium cursor-pointer" src='/'>
           HOME
         </button>
         <button className="text-gray-700 hover:text-blue-500 font-medium cursor-pointer">
