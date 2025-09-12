@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import Profile from "./components/Profile";
 import ListingPage from "./pages/ListingPage"; // renamed from Booking
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <div className="container mx-auto px-4 py-8">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
             {/* Dynamic route for a listing */}
             <Route path="/listing/:id" element={<ListingPage />} />
           </Routes>

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleProfileMenu = () => {
     setIsProfileMenuOpen(!isProfileMenuOpen);
@@ -17,7 +19,10 @@ export default function Navbar() {
 
       {/* Navigation Links */}
       <div className="flex space-x-6">
-        <button className="text-gray-700 hover:text-blue-500 font-medium cursor-pointer" src='/'>
+        <button 
+          className="text-gray-700 hover:text-blue-500 font-medium cursor-pointer"
+          onClick={() => navigate('/')}
+        >
           HOME
         </button>
         <button className="text-gray-700 hover:text-blue-500 font-medium cursor-pointer">
@@ -53,7 +58,13 @@ export default function Navbar() {
         {/* Dropdown Menu */}
         {isProfileMenuOpen && (
           <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-            <button className="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors duration-150">
+            <button 
+              className="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors duration-150"
+              onClick={() => {
+                navigate('/profile');
+                setIsProfileMenuOpen(false);
+              }}
+            >
               Profile
             </button>
             <button className="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors duration-150">
