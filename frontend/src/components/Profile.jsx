@@ -8,7 +8,7 @@ const Profile = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const [userProfile, setUserProfile] = useState({
-        name: 'John Traveler',
+        name: 'Decendman Pothmi',
         email: 'john.traveler@email.com',
         phone: '+91 98765 43210',
         location: 'Shillong, Meghalaya',
