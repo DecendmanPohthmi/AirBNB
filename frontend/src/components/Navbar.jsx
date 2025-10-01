@@ -71,8 +71,14 @@ export default function Navbar() {
               Help Center
             </button>
             <hr className="my-2 border-gray-200" />
-            <button className="w-full text-left px-4 py-2 text-blue-600 hover:bg-blue-50 font-medium transition-colors duration-150">
-              Login/Sign In
+            <button className="w-full text-left px-4 py-2 text-blue-600 hover:bg-blue-50 font-medium transition-colors duration-150"
+              onClick={() => {
+                navigate('/auth');
+                setIsProfileMenuOpen(false);
+              }}
+            >
+              Login / Sign Up
+              
             </button>
           </div>
         )}

@@ -7,6 +7,7 @@ import image2 from "../assets/image2Bed2.jpeg"; // extra
 import image3 from "../assets/image3Bed2.jpeg"; // extra
 import image5 from "../assets/image2Bed3.jpeg"; // extra
 import image6 from "../assets/image3Bed3.jpeg"; // extra
+import homeImage from "../assets/image14.jpeg"
 
 const listings = [
   {
@@ -46,6 +47,15 @@ const listings = [
 export default function Home() {
   return (
     <div className="px-6 py-10">
+      <div className="mb-8 overflow-hidden rounded-xl shadow">
+  <img
+    src={homeImage}
+    alt="Scenic Dawki"
+    className="w-full h-64 md:h-96 object-cover object-center"
+    loading="lazy"
+  />
+</div>
+
       <h2 className="text-2xl font-bold mb-6">Available in DawKi</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
